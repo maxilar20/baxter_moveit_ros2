@@ -11,4 +11,7 @@
 
     <xacro:baxter_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
 
+    <!-- Coffe Table -->
+    <xacro:include filename="$(find baxter_moveit_ros2)/config/table.xacro" />
+
 </robot>
