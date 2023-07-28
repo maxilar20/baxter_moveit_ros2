@@ -11,6 +11,7 @@
       </material>
     </visual>
     <collision name="table_surface">
+    <origin rpy="0  1.57  0" xyz="0 0 0"/>
     <geometry>
         <box size="0.6 1.0 0.025"/>
       </geometry>
@@ -20,14 +21,16 @@
   <link name="world_absolute">
   </link>
 
+  <joint name="world_absolute_to_robot" type="fixed">
+    <parent link="base"/>
+    <child link="world_absolute"/>
+    <origin xyz="0.6 0 -0.9"/>
+  </joint>
+  
   <joint name="world_absolute_to_table_0" type="fixed">
     <parent link="world_absolute"/>
     <child link="table_0"/>
     <origin rpy="3.1415 -1.57 0" xyz="0 0 0.73"/>
   </joint>
-  <joint name="world_absolute_to_robot" type="fixed">
-    <parent link="world_absolute"/>
-    <child link="base"/>
-    <origin xyz="-0.55 0 0.9"/>
-  </joint>
+  
 </robot>

@@ -6,7 +6,6 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Pose1
       Splitter Ratio: 0.5
     Tree Height: 787
   - Class: rviz_common/Selection
@@ -339,11 +338,20 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          table_0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           torso:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
+          world_absolute:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
         Robot Alpha: 1
         Show Robot Collision: false
         Show Robot Visual: true
@@ -382,10 +390,6 @@ Visualization Manager:
         left_gripper:
           Value: true
         left_gripper_base:
-          Value: true
-        left_gripper_mass:
-          Value: true
-        left_gripper_object_mass:
           Value: true
         left_hand:
           Value: true
@@ -429,128 +433,6 @@ Visualization Manager:
           Value: true
         r_gripper_r_finger_tip:
           Value: true
-        reference/base:
-          Value: true
-        reference/collision_head_link_1:
-          Value: true
-        reference/collision_head_link_2:
-          Value: true
-        reference/display:
-          Value: true
-        reference/dummyhead1:
-          Value: true
-        reference/head:
-          Value: true
-        reference/head_camera:
-          Value: true
-        reference/l_gripper_l_finger:
-          Value: true
-        reference/l_gripper_l_finger_tip:
-          Value: true
-        reference/l_gripper_r_finger:
-          Value: true
-        reference/l_gripper_r_finger_tip:
-          Value: true
-        reference/left_arm_itb:
-          Value: true
-        reference/left_arm_mount:
-          Value: true
-        reference/left_gripper:
-          Value: true
-        reference/left_gripper_base:
-          Value: true
-        reference/left_gripper_mass:
-          Value: true
-        reference/left_gripper_object_mass:
-          Value: true
-        reference/left_hand:
-          Value: true
-        reference/left_hand_accelerometer:
-          Value: true
-        reference/left_hand_camera:
-          Value: true
-        reference/left_hand_camera_axis:
-          Value: true
-        reference/left_hand_range:
-          Value: true
-        reference/left_lower_elbow:
-          Value: true
-        reference/left_lower_forearm:
-          Value: true
-        reference/left_lower_shoulder:
-          Value: true
-        reference/left_torso_itb:
-          Value: true
-        reference/left_upper_elbow:
-          Value: true
-        reference/left_upper_elbow_visual:
-          Value: true
-        reference/left_upper_forearm:
-          Value: true
-        reference/left_upper_forearm_visual:
-          Value: true
-        reference/left_upper_shoulder:
-          Value: true
-        reference/left_wrist:
-          Value: true
-        reference/pedestal:
-          Value: true
-        reference/r_gripper_l_finger:
-          Value: true
-        reference/r_gripper_l_finger_tip:
-          Value: true
-        reference/r_gripper_r_finger:
-          Value: true
-        reference/r_gripper_r_finger_tip:
-          Value: true
-        reference/right_arm_itb:
-          Value: true
-        reference/right_arm_mount:
-          Value: true
-        reference/right_gripper:
-          Value: true
-        reference/right_gripper_base:
-          Value: true
-        reference/right_gripper_mass:
-          Value: true
-        reference/right_gripper_object_mass:
-          Value: true
-        reference/right_hand:
-          Value: true
-        reference/right_hand_accelerometer:
-          Value: true
-        reference/right_hand_camera:
-          Value: true
-        reference/right_hand_camera_axis:
-          Value: true
-        reference/right_hand_range:
-          Value: true
-        reference/right_lower_elbow:
-          Value: true
-        reference/right_lower_forearm:
-          Value: true
-        reference/right_lower_shoulder:
-          Value: true
-        reference/right_torso_itb:
-          Value: true
-        reference/right_upper_elbow:
-          Value: true
-        reference/right_upper_elbow_visual:
-          Value: true
-        reference/right_upper_forearm:
-          Value: true
-        reference/right_upper_forearm_visual:
-          Value: true
-        reference/right_upper_shoulder:
-          Value: true
-        reference/right_wrist:
-          Value: true
-        reference/screen:
-          Value: true
-        reference/sonar_ring:
-          Value: true
-        reference/torso:
-          Value: true
         right_arm_itb:
           Value: true
         right_arm_mount:
@@ -558,10 +440,6 @@ Visualization Manager:
         right_gripper:
           Value: true
         right_gripper_base:
-          Value: true
-        right_gripper_mass:
-          Value: true
-        right_gripper_object_mass:
           Value: true
         right_hand:
           Value: true
@@ -599,9 +477,11 @@ Visualization Manager:
           Value: true
         sonar_ring:
           Value: true
+        table_0:
+          Value: true
         torso:
           Value: true
-        world:
+        world_absolute:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -609,219 +489,83 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        world:
-          base:
-            collision_head_link_1:
-              {}
-            collision_head_link_2:
-              {}
-            torso:
-              head:
-                dummyhead1:
-                  {}
-                head_camera:
-                  {}
-                screen:
-                  display:
+        base:
+          collision_head_link_1:
+            {}
+          collision_head_link_2:
+            {}
+          torso:
+            left_arm_mount:
+              left_upper_shoulder:
+                left_lower_shoulder:
+                  left_upper_elbow:
+                    left_lower_elbow:
+                      left_upper_forearm:
+                        left_arm_itb:
+                          {}
+                        left_lower_forearm:
+                          left_wrist:
+                            left_hand:
+                              left_gripper_base:
+                                left_gripper:
+                                  {}
+                              left_hand_accelerometer:
+                                {}
+                              left_hand_camera:
+                                {}
+                              left_hand_camera_axis:
+                                left_hand_camera_gz:
+                                  {}
+                              left_hand_range:
+                                {}
+                      left_upper_forearm_visual:
+                        {}
+                  left_upper_elbow_visual:
                     {}
-              left_arm_mount:
-                left_upper_shoulder:
-                  left_lower_shoulder:
-                    left_upper_elbow:
-                      left_lower_elbow:
-                        left_upper_forearm:
-                          left_arm_itb:
-                            {}
-                          left_lower_forearm:
-                            left_wrist:
-                              left_hand:
-                                left_gripper_base:
-                                  l_gripper_l_finger:
-                                    l_gripper_l_finger_tip:
-                                      {}
-                                  l_gripper_r_finger:
-                                    l_gripper_r_finger_tip:
-                                      {}
-                                  left_gripper:
-                                    {}
-                                left_gripper_mass:
-                                  left_gripper_object_mass:
-                                    {}
-                                left_hand_accelerometer:
-                                  {}
-                                left_hand_camera:
-                                  {}
-                                left_hand_camera_axis:
-                                  left_hand_camera_gz:
-                                    {}
-                                left_hand_range:
-                                  {}
-                        left_upper_forearm_visual:
-                          {}
-                    left_upper_elbow_visual:
-                      {}
-              left_torso_itb:
-                {}
-              pedestal:
-                {}
-              right_arm_mount:
-                right_upper_shoulder:
-                  right_lower_shoulder:
-                    right_upper_elbow:
-                      right_lower_elbow:
-                        right_upper_forearm:
-                          right_arm_itb:
-                            {}
-                          right_lower_forearm:
-                            right_wrist:
-                              right_hand:
-                                right_gripper_base:
-                                  r_gripper_l_finger:
-                                    r_gripper_l_finger_tip:
-                                      {}
-                                  r_gripper_r_finger:
-                                    r_gripper_r_finger_tip:
-                                      {}
-                                  right_gripper:
-                                    {}
-                                right_gripper_mass:
-                                  right_gripper_object_mass:
-                                    {}
-                                right_hand_accelerometer:
-                                  {}
-                                right_hand_camera:
-                                  {}
-                                right_hand_camera_axis:
-                                  right_hand_camera_gz:
-                                    {}
-                                right_hand_range:
-                                  {}
-                        right_upper_forearm_visual:
-                          {}
-                    right_upper_elbow_visual:
-                      {}
-              right_torso_itb:
-                {}
-              sonar_ring:
-                {}
-          reference/base:
-            reference/collision_head_link_1:
+            left_torso_itb:
               {}
-            reference/collision_head_link_2:
+            pedestal:
               {}
-            reference/torso:
-              reference/head:
-                reference/dummyhead1:
-                  {}
-                reference/head_camera:
-                  {}
-                reference/screen:
-                  reference/display:
+            right_arm_mount:
+              right_upper_shoulder:
+                right_lower_shoulder:
+                  right_upper_elbow:
+                    right_lower_elbow:
+                      right_upper_forearm:
+                        right_arm_itb:
+                          {}
+                        right_lower_forearm:
+                          right_wrist:
+                            right_hand:
+                              right_gripper_base:
+                                right_gripper:
+                                  {}
+                              right_hand_accelerometer:
+                                {}
+                              right_hand_camera:
+                                {}
+                              right_hand_camera_axis:
+                                right_hand_camera_gz:
+                                  {}
+                              right_hand_range:
+                                {}
+                      right_upper_forearm_visual:
+                        {}
+                  right_upper_elbow_visual:
                     {}
-              reference/left_arm_mount:
-                reference/left_upper_shoulder:
-                  reference/left_lower_shoulder:
-                    reference/left_upper_elbow:
-                      reference/left_lower_elbow:
-                        reference/left_upper_forearm:
-                          reference/left_arm_itb:
-                            {}
-                          reference/left_lower_forearm:
-                            reference/left_wrist:
-                              reference/left_hand:
-                                reference/left_gripper_base:
-                                  reference/l_gripper_l_finger:
-                                    reference/l_gripper_l_finger_tip:
-                                      {}
-                                  reference/l_gripper_r_finger:
-                                    reference/l_gripper_r_finger_tip:
-                                      {}
-                                  reference/left_gripper:
-                                    {}
-                                reference/left_gripper_mass:
-                                  reference/left_gripper_object_mass:
-                                    {}
-                                reference/left_hand_accelerometer:
-                                  {}
-                                reference/left_hand_camera:
-                                  {}
-                                reference/left_hand_camera_axis:
-                                  {}
-                                reference/left_hand_range:
-                                  {}
-                        reference/left_upper_forearm_visual:
-                          {}
-                    reference/left_upper_elbow_visual:
-                      {}
-              reference/left_torso_itb:
-                {}
-              reference/pedestal:
-                {}
-              reference/right_arm_mount:
-                reference/right_upper_shoulder:
-                  reference/right_lower_shoulder:
-                    reference/right_upper_elbow:
-                      reference/right_lower_elbow:
-                        reference/right_upper_forearm:
-                          reference/right_arm_itb:
-                            {}
-                          reference/right_lower_forearm:
-                            reference/right_wrist:
-                              reference/right_hand:
-                                reference/right_gripper_base:
-                                  reference/r_gripper_l_finger:
-                                    reference/r_gripper_l_finger_tip:
-                                      {}
-                                  reference/r_gripper_r_finger:
-                                    reference/r_gripper_r_finger_tip:
-                                      {}
-                                  reference/right_gripper:
-                                    {}
-                                reference/right_gripper_mass:
-                                  reference/right_gripper_object_mass:
-                                    {}
-                                reference/right_hand_accelerometer:
-                                  {}
-                                reference/right_hand_camera:
-                                  {}
-                                reference/right_hand_camera_axis:
-                                  {}
-                                reference/right_hand_range:
-                                  {}
-                        reference/right_upper_forearm_visual:
-                          {}
-                    reference/right_upper_elbow_visual:
-                      {}
-              reference/right_torso_itb:
-                {}
-              reference/sonar_ring:
-                {}
+            right_torso_itb:
+              {}
+            sonar_ring:
+              {}
+          world_absolute:
+            table_0:
+              {}
       Update Interval: 0
-      Value: true
-    - Alpha: 1
-      Axes Length: 1
-      Axes Radius: 0.10000000149011612
-      Class: rviz_default_plugins/Pose
-      Color: 255; 25; 0
-      Enabled: true
-      Head Length: 0.30000001192092896
-      Head Radius: 0.10000000149011612
-      Name: Pose
-      Shaft Length: 1
-      Shaft Radius: 0.05000000074505806
-      Shape: Arrow
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /goal_pose
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: world
+    Fixed Frame: base
     Frame Rate: 30
   Name: root
   Tools:

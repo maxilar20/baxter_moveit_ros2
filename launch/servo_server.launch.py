@@ -140,24 +140,29 @@ def generate_launch_description():
     servo_yaml = load_yaml("baxter_moveit_ros2", "config/baxter_config.yaml")
     servo_params = {"moveit_servo": servo_yaml}
 
-    # # RViz
-    # rviz_config_file = (
-    #     get_package_share_directory("baxter_moveit_ros2")
-    #     + "/config/demo_rviz_config.rviz"
-    # )
-    # ld.add_action(
-    #     Node(
-    #         package="rviz2",
-    #         executable="rviz2",
-    #         name="rviz2",
-    #         output="log",
-    #         arguments=["-d", rviz_config_file],
-    #         parameters=[
-    #             moveit_config.robot_description,
-    #             moveit_config.robot_description_semantic,
-    #         ],
-    #     )
-    # )
+    # Launch as much as possible in components
+    ld.add_action(
+        ComposableNodeContainer(
+            name="moveit_servo_demo_container",
+            namespace="/",
+            package="rclcpp_components",
+            executable="component_container_mt",
+            composable_node_descriptions=[
+                ComposableNode(
+                    package="moveit_servo",
+                    plugin="moveit_servo::JoyToServoPub",
+                    name="controller_to_servo_node",
+                ),
+                ComposableNode(
+                    package="joy",
+                    plugin="joy::Joy",
+                    name="joy_node",
+                    parameters=[{"deadzone": 0.1}],
+                ),
+            ],
+            output="screen",
+        )
+    )
 
     # Launch a standalone Servo node.
     # As opposed to a node component, this may be necessary (for example) if Servo is running on a different PC

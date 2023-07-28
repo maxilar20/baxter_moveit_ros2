@@ -30,7 +30,6 @@
     <end_effector name="left_gripper" parent_link="left_arm_mount" group="left_arm"/>
     <end_effector name="right_gripper" parent_link="right_arm_mount" group="right_arm"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
-    <virtual_joint name="world" type="fixed" parent_frame="world" child_link="base"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="collision_head_link_1" link2="collision_head_link_2" reason="Adjacent"/>
     <disable_collisions link1="collision_head_link_1" link2="display" reason="Adjacent"/>
